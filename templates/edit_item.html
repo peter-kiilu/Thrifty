@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Edit Clothing Item</h2>
+    <form method="POST" class="item-form">
+        <div class="form-group">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" value="{{ item.name }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required>{{ item.description }}</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" min="0" value="{{ item.price }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="image_url">Image URL:</label>
+            <input type="url" id="image_url" name="image_url" value="{{ item.image_url }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="Men" {% if item.category == 'Men' %}selected{% endif %}>Men</option>
+                <option value="Women" {% if item.category == 'Women' %}selected{% endif %}>Women</option>
+                <option value="Kids" {% if item.category == 'Kids' %}selected{% endif %}>Kids</option>
+                <option value="Accessories" {% if item.category == 'Accessories' %}selected{% endif %}>Accessories</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn submit">Update Item</button>
+    </form>
+{% endblock %}

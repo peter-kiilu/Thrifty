@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Sale Items</h2>
+    <div class="items-grid">
+        {% for item in sale_items %}
+        <div class="item-card">
+            <img src="{{ item.image_url }}" alt="{{ item.name }}">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p class="price">
+                <span class="original-price">${{ "%.2f"|format(item.price * 1.2) }}</span>
+                ${{ "%.2f"|format(item.price) }}
+            </p>
+            <p class="category">{{ item.category }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

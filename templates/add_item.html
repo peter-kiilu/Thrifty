@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Add New Clothing Item</h2>
+<form method="POST" class="item-form">
+    <div class="form-group">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="name" required>
+     </div>
+
+     <div class="form-group">
+        <label for="name">Description</label>
+        <textarea name="description" id="description" required></textarea>
+      </div>
+
+       <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" min="0" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="image_url">Image URL:</label>
+            <input type="url" id="image_url" name="image_url" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Kids">Kids</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn submit">Add Item</button>
+    </form>
+{% endblock %}
+</form>

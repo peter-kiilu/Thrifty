@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="about-container">
+        <h2>About Thrifty Clothline</h2>
+        <div class="about-content">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="About Us" class="about-image">
+            <div class="about-text">
+                <p>Welcome to Thrifty Clothline, your premier destination for fashionable and affordable clothing.</p>
+                <p>Founded in 2023, we've been committed to providing high-quality apparel with exceptional customer service.</p>
+                <p>Our mission is to make fashion accessible to everyone without compromising on style or quality.</p>
+                <h3>Our Values</h3>
+                <ul>
+                    <li>Quality craftsmanship</li>
+                    <li>Ethical production</li>
+                    <li>Customer satisfaction</li>
+                    <li>Sustainable fashion</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

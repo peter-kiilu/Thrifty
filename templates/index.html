@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Our Collection</h2>
+    <div class="items-grid">
+        {% for item in items %}
+        <div class="item-card">
+            <img src="{{ item.image_url }}" alt="{{ item.name }}">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p class="price">${{ "%.2f"|format(item.price) }}</p>
+            <p class="category">{{ item.category }}</p>
+            <div class="actions">
+                <a href="{{ url_for('edit_item', id=item.id) }}" class="btn edit">Edit</a>
+                <a href="{{ url_for('delete_item', id=item.id) }}" class="btn delete" onclick="return confirm('Are you sure?')">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
