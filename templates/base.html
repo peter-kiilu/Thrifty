@@ -34,9 +34,68 @@
     </main>
     
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Thrifty Clothline. All rights reserved.</p>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="{{ url_for('shop') }}">All Products</a></li>
+                    <li><a href="{{ url_for('new_arrivals') }}">New Arrivals</a></li>
+                    <li><a href="{{ url_for('sale') }}">Sale Items</a></li>
+                    <li><a href="#">Men's Collection</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-    </footer>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Thrifty Clothline. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
